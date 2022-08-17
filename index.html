@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Mise à jour</title>
+</head>
+<body>
+
+    <div id="debut">
+        <!-- Pour mettre de l'espace entre le haut de la page et le premier élément à s'afficher -->
+    </div>
+
+    <!-- Message qui doit s'afficher à la fin du téléchargement en haut de la barre de progression -->
+    <div class="message_de_fin">
+        <h1> <img src="Check-PNG.png" alt="check" id="image"> Téléchargement effectué avec success!!!</h1>
+    </div>
+    <!-- Fin du message -->
+
+
+    <!-- Message qui s'affiche à l'arrivé sur la page-->
+    <h2 class="container">Mise à jour en cour de téléchargement</h2>
+    <div id="box">
+        <div id="couleur">
+            <div id="passe"></div>
+        </div>
+    </div>
+    <!-- Fin -->
+
+    <!-- Les div des messages qui doivent s'afficher en dessous de la barre de progression au cours du téléchargement-->
+    <div class="pourcentage">
+        <p>Téléchargement à 10%. En attente de connexion...</p>
+    </div>
+
+    <div class="pourcentage_1">
+        <p id="cool_1">Téléchargement à 23%</p>
+    </div>
+    <div class="pourcentage_2">
+        <p id="cool_2">Téléchargement à 36%</p>
+    </div>
+    <div class="pourcentage_3">
+        <p id="cool_3">Téléchargement à 50%</p>
+    </div>
+    <div class="pourcentage_4">
+        <p id="cool_4">Téléchargement à 63%</p>
+    </div>
+    <div class="pourcentage_5">
+        <p id="cool_5">Téléchargement à 76%</p>
+    </div>
+    <div class="pourcentage_6">
+        <p id="cool_6">Téléchargement à 90%</p>
+    </div>
+    <div class="merci">
+        <p id="merci">Merci d'avoir fait votre mise à jour sur notre page!!!</p>
+    </div>
+    <!--Fin des divs -->
+
+
+    <!-- EJAD-->
+    <footer>
+        <h4>Powered by <em>EJAD</em></h4>
+    </footer>
+    <!-- EJAD-->
+
+    <script src="jquery-3.6.0.min.js"></script>
+
+    <!--Début du script jquery-->
+    <script>
+        
+        // On entre dans la fonction dès le chargement de la page
+        $(document).ready(function() {
+
+            // Début de la barre de progression
+            function progres() {
+                $("#couleur").animate({width: "350px"}, 1000);
+                proges2();
+            }
+
+            setTimeout(progres, 2000);
+
+            function proges2() {
+                $("#couleur").animate({width: "550px"}, 1000);
+                proges3();
+            }
+
+            function proges3() {
+                $("#couleur").animate({width: "750px"}, 1000);
+                proges4();
+            }
+            
+            function proges4() {
+                $("#couleur").animate({width: "950px"}, 1000);
+                proges5();
+            } 
+            
+            function proges5() {
+                $("#couleur").animate({width: "1150px"}, 1000);
+                proges6();
+            } 
+            
+            function proges6() {
+                $("#couleur").animate({width: "1350px"}, 1000);
+                proges7();
+            }
+
+            function proges7() {
+                $("#couleur").animate({width: "1500px"}, 1000);
+                let h2 = document.getElementsByName("h2");
+            }
+            // Fin de la barre de progression
+
+
+
+            // Début de l'affichage des messages de téléchargement en bas de la barre de progression
+            function cacher() {
+                $(".pourcentage").hide();
+            }
+            setTimeout(cacher, 2000);
+
+            function cacher_1() {
+                $("div").removeClass("pourcentage_1");
+            }
+            setTimeout(cacher_1, 2500);
+
+            function cacher_2() {
+                $("#cool_1").addClass("pourcentage_1");
+                $("div").removeClass("pourcentage_2");
+            }
+            setTimeout(cacher_2, 3500);
+
+            function cacher_3() {
+                $("#cool_2").addClass("pourcentage_2");
+                $("div").removeClass("pourcentage_3");
+            }
+            setTimeout(cacher_3, 4500);
+
+            function cacher_4() {
+                $("#cool_3").addClass("pourcentage_3");
+                $("div").removeClass("pourcentage_4");
+            }
+            setTimeout(cacher_4, 5500);
+
+            function cacher_5() {
+                $("#cool_4").addClass("pourcentage_4");
+                $("div").removeClass("pourcentage_5");
+            }
+            setTimeout(cacher_5, 6500);
+            
+            function cacher_6() {
+                $("#cool_5").addClass("pourcentage_5");
+                $("div").removeClass("pourcentage_6");
+            }
+            setTimeout(cacher_6, 7500);
+
+            function cacher_ultime() {
+                $("#cool_6").addClass("pourcentage_6");
+                $("div").removeClass("merci")
+            }
+            setTimeout(cacher_ultime, 9000);
+            // Fin de l'affichage des messages de téléchargement
+
+
+
+            // Affichage du message de réussite du téléchargement
+            function appel() {
+                $("div").removeClass("message_de_fin");
+                $("h2").hide();
+            }
+            setTimeout(appel, 9000);
+            // Fin de la fonction d'affichage du message de réussite du téléchargement
+
+
+            // Les fonctions aller() et retour() définissent l vas et viens de la div en bleu ciel en dessous de celle en bleu foncé qui preogresse
+            function aller() {
+                $("#passe").animate({left: "1350px"}, 2000);
+                retour();
+            }
+            aller();
+
+            function retour() {
+                $("#passe").animate({left : "0px"}, 2000);
+                aller();
+            }
+            // Fin des fonctions aller() et retour()
+
+        })
+
+
+    </script>
+</body>
+</html>

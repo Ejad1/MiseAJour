@@ -1,0 +1,84 @@
+html {
+    font-size: 100%;
+}
+
+body {
+    text-align: center;
+    font-size: xx-large;
+}
+
+footer {
+    padding-top: 70px;
+}
+
+em {
+    color: red;
+}
+
+#debut {
+    height: 50px;
+}
+
+#box {
+    border-style: double;
+    width: 1500px;
+    height: 100px;
+}
+
+#couleur {
+    background-color: blue;
+    width: 150px;
+    height: 100px;
+    margin-top: -1px; /* c'était -32px */
+    padding: 0%;
+    position: absolute;
+}
+
+#passe {
+    background-color: rgb(135,206,235);
+    position: relative;
+    width: 150px;
+    height: 100px;
+    z-index: -1;
+}
+
+.message_de_fin {
+    display: none;
+}
+
+#image {
+    padding-top: 50px;
+    height: 50px;
+}
+
+.pourcentage_1 {
+    display: none;
+}
+
+.pourcentage_2 {
+    display: none;
+}
+
+.pourcentage_3 {
+    display: none;
+}
+
+.pourcentage_4 {
+    display: none;
+}
+
+.pourcentage_5 {
+    display: none;
+}
+
+.pourcentage_6 {
+    display: none;
+}
+
+.pourcentage_7 {
+    display: none;
+}
+
+.merci {
+    display: none;
+}
